@@ -3,7 +3,7 @@
 /**
  * Echo Bot - the XMPP Hello World
  **/
-var Client = require('../index')
+var Client = require('node-xmpp-client')
 var argv = process.argv
 
 if (argv.length !== 4) {
@@ -16,7 +16,9 @@ if (argv.length !== 4) {
 var client = new Client({
   jid: argv[2],
   password: argv[3],
-  host: 'localhost'
+//  host: 'swei_turner_xmpp_server.c9users.io',
+host: 'localhost',  
+port: 8080
 })
 
 client.on('online', function () {
