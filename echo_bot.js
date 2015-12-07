@@ -17,7 +17,10 @@ var client = new Client({
   jid: argv[2],
   password: argv[3],
 //  host: 'swei_turner_xmpp_server.c9users.io',
-host: 'localhost',  
+bosh: {
+  url : "http://localhost:8080/http-bind"
+},
+//host: 'localhost',  
 port: 8080
 })
 
